@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jellies & Gummies | Art of Cocoa</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f8f4e9; font-family: 'Arial', sans-serif; }
+        .top-bar {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: #3c280d; color: white; padding: 15px 30px;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .back-btn {
+            color: white; text-decoration: none; font-size: 15px;
+            display: flex; align-items: center; gap: 8px; transition: all 0.3s;
+        }
+        .back-btn:hover { color: #c9a769; transform: translateX(-3px); }
+        .product-name { font-size: 18px; font-weight: 600; text-align: center; }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            color: #FFF;
+            text-decoration: none;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .content-wrapper {
+            margin-top: 70px; padding: 30px;
+            max-width: 1000px; margin-left: auto; margin-right: auto;
+        }
+        .page-container {
+            background: white; margin-bottom: 30px;
+            border-radius: 10px; overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .page-image { width: 100%; height: auto; display: block; }
+        .page-number {
+            text-align: center; padding: 10px; background: #f5f5f5;
+            color: #666; font-size: 14px; border-top: 1px solid #eee;
+        }
+        @media (max-width: 768px) {
+            .top-bar { padding: 12px 20px; }
+            .content-wrapper { padding: 15px; margin-top: 60px; }
+            .whatsapp-float {
+                width: 50px; height: 50px; font-size: 25px;
+                bottom: 30px; right: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Products
+        </a>
+        <div class="product-name">Jellies & Gummies</div>
+        <div style="width: 100px;"></div>
+    </div>
+    
+    <div class="content-wrapper">
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page1.jpg" class="page-image" alt="Jellies & Gummies Page 1">
+            <div class="page-number">Page 1</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page2.jpg" class="page-image" alt="Jellies & Gummies Page 2">
+            <div class="page-number">Page 2</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page3.jpg" class="page-image" alt="Jellies & Gummies Page 3">
+            <div class="page-number">Page 3</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page4.jpg" class="page-image" alt="Jellies & Gummies Page 4">
+            <div class="page-number">Page 4</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page5.jpg" class="page-image" alt="Jellies & Gummies Page 5">
+            <div class="page-number">Page 5</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page6.jpg" class="page-image" alt="Jellies & Gummies Page 6">
+            <div class="page-number">Page 6</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page7.jpg" class="page-image" alt="Jellies & Gummies Page 7">
+            <div class="page-number">Page 7</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page8.jpg" class="page-image" alt="Jellies & Gummies Page 8">
+            <div class="page-number">Page 8</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page9.jpg" class="page-image" alt="Jellies & Gummies Page 9">
+            <div class="page-number">Page 9</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page10.jpg" class="page-image" alt="Jellies & Gummies Page 10">
+            <div class="page-number">Page 10</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page11.jpg" class="page-image" alt="Jellies & Gummies Page 11">
+            <div class="page-number">Page 11</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page12.jpg" class="page-image" alt="Jellies & Gummies Page 12">
+            <div class="page-number">Page 12</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page13.jpg" class="page-image" alt="Jellies & Gummies Page 13">
+            <div class="page-number">Page 13</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page14.jpg" class="page-image" alt="Jellies & Gummies Page 14">
+            <div class="page-number">Page 14</div>
+        </div>
+        <div class="page-container">
+            <img src="pdf-images/jellies-gummies/page15.jpg" class="page-image" alt="Jellies & Gummies Page 15">
+            <div class="page-number">Page 15</div>
+        </div>
+    </div>
+    
+    <a href="https://wa.me/916362898414" class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>

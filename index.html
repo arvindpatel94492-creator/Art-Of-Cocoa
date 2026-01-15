@@ -1,0 +1,2470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Art of Cocoa | Premium B2B Confectionery & Bulk Supply</title>
+    <meta name="title" content="Art of Cocoa | Premium B2B Confectionery & Bulk Supply">
+    <meta name="description" content="Premium wholesale confectionery for corporates, supermarkets & bulk supply. Over a decade of excellence in B2B chocolate distribution and luxury gifting solutions. Imported chocolates, beverages, cookies, candies and more.">
+    <meta name="keywords" content="premium chocolates, wholesale confectionery, B2B chocolate suppliers, bulk candy supply, corporate gifting, imported chocolates, supermarket suppliers, hotel confectionery, bulk confectionery India, wholesale sweets, luxury corporate gifts, chocolate distributors, confectionery suppliers, bulk order chocolates, business to business chocolates">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artofcocoa.com/">
+    <meta property="og:title" content="Art of Cocoa | Premium B2B Confectionery & Bulk Supply">
+    <meta property="og:description" content="Premium wholesale confectionery for corporates, supermarkets & bulk supply. Over a decade of excellence in B2B chocolate distribution and luxury gifting solutions.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1575377427642-087cf684f29d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://artofcocoa.com/">
+    <meta property="twitter:title" content="Art of Cocoa | Premium B2B Confectionery & Bulk Supply">
+    <meta property="twitter:description" content="Premium wholesale confectionery for corporates, supermarkets & bulk supply. Over a decade of excellence in B2B chocolate distribution and luxury gifting solutions.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1575377427642-087cf684f29d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="author" content="Art of Cocoa">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#3c280d">
+    <meta name="copyright" content="Art of Cocoa">
+    <meta name="company" content="Art of Cocoa">
+    <meta name="country" content="India">
+    
+    <!-- Business Specific Meta -->
+    <meta name="business:category" content="Confectionery Wholesale">
+    <meta name="business:type" content="B2B Supplier">
+    <meta name="business:product" content="Chocolates, Candies, Beverages, Cookies">
+    <meta name="business:location" content="Bangalore, India">
+    <meta name="business:year" content="2015">
+    
+    <!-- Structured Data Keywords -->
+    <meta name="subject" content="B2B Confectionery Wholesale">
+    <meta name="topic" content="Premium Chocolate Distribution">
+    <meta name="summary" content="Art of Cocoa provides premium wholesale confectionery solutions for businesses across India since 2015.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- WhatsApp Floating Button Styles -->
+    <style>
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            color: #FFF;
+            text-decoration: none;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Google Form Floating Button */
+        .google-form-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 110px;
+            right: 40px;
+            background-color: #4285F4;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 25px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .google-form-float:hover {
+            background-color: #3367D6;
+            transform: scale(1.1);
+            color: #FFF;
+            text-decoration: none;
+            width: 180px;
+        }
+        
+        .float-label {
+            display: none;
+            margin-left: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .google-form-float:hover .float-label {
+            display: inline;
+        }
+        
+        /* Form Choice Buttons */
+        .form-choice-buttons {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .btn-form-choice {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--luxury-gold);
+            color: var(--luxury-gold);
+            padding: 12px 25px;
+            font-size: 0.95rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn-form-choice.active {
+            background: var(--luxury-gold);
+            color: var(--primary-dark);
+            border-color: var(--luxury-gold);
+        }
+
+        .btn-form-choice:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Google Form Container */
+        .google-form-container {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .google-form-container.active {
+            display: block;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .form-header h3 {
+            color: var(--rich-brown);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .form-header h3 i {
+            color: #4285F4;
+            margin-right: 10px;
+        }
+
+        .form-footer {
+            margin-top: 20px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .form-footer i {
+            margin-right: 8px;
+        }
+
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--luxury-gold);
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .btn-link:hover {
+            color: var(--chocolate);
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Rest of your existing styles remain the same */
+        :root {
+            --primary-dark: #1a0f00;
+            --rich-brown: #3c280d;
+            --chocolate: #5a3a1c;
+            --dark-chocolate: #2c1809;
+            --luxury-gold: #c9a769;
+            --soft-gold: #e6c990;
+            --accent-gold: #f0c05a;
+            --cream: #f8f4e9;
+            --ivory: #fffcf5;
+            --pastel-rose: #f8e1e7;
+            --pastel-mint: #e0f0ea;
+            --pastel-lavender: #ece5f0;
+            --white: #ffffff;
+            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-light: 0 8px 25px rgba(26, 15, 0, 0.08);
+            --shadow-medium: 0 15px 35px rgba(26, 15, 0, 0.12);
+            --shadow-heavy: 0 25px 60px rgba(26, 15, 0, 0.2);
+            --radius: 10px;
+            --radius-lg: 20px;
+            --radius-xl: 30px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary-dark);
+            background-color: var(--ivory);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+        
+        h1, h2, h3, h4, h5, .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+        
+        h1 {
+            font-size: 4.2rem;
+        }
+        
+        h2 {
+            font-size: 3.5rem;
+        }
+        
+        h3 {
+            font-size: 2.5rem;
+        }
+        
+        h4 {
+            font-size: 1.8rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .section-padding {
+            padding: 140px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 90px;
+            position: relative;
+        }
+        
+        .section-header h2 {
+            font-size: 4rem;
+            color: var(--rich-brown);
+            display: inline-block;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards 0.3s;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--luxury-gold), var(--chocolate));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 400;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards 0.5s;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--luxury-gold) 0%, var(--accent-gold) 100%);
+            color: var(--primary-dark);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: var(--shadow-light);
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, var(--chocolate) 0%, var(--dark-chocolate) 100%);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            width: 100%;
+        }
+        
+        .btn:hover {
+            color: var(--cream);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .btn i {
+            margin-left: 12px;
+            transition: var(--transition);
+        }
+        
+        .btn:hover i {
+            transform: translateX(8px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--luxury-gold);
+            color: var(--luxury-gold);
+        }
+        
+        .btn-secondary:before {
+            background: linear-gradient(135deg, var(--luxury-gold) 0%, var(--accent-gold) 100%);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--chocolate);
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 30px 0;
+            transition: var(--transition);
+            background-color: transparent;
+        }
+        
+        .header.scrolled {
+            background-color: rgba(26, 15, 0, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 20px 0;
+            box-shadow: 0 10px 30px rgba(26, 15, 0, 0.15);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--luxury-gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--luxury-gold);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .logo:hover:after {
+            transform: translateX(0);
+        }
+        
+        .logo i {
+            color: var(--soft-gold);
+            margin-right: 12px;
+            font-size: 2.2rem;
+        }
+        
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-left: 45px;
+            position: relative;
+        }
+        
+        .nav-link {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--luxury-gold);
+            left: 0;
+            bottom: 0;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover {
+            color: var(--luxury-gold);
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--cream);
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: var(--transition);
+        }
+        
+        .hamburger:hover {
+            color: var(--luxury-gold);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: 
+                linear-gradient(rgba(26, 15, 0, 0.85), rgba(44, 24, 9, 0.9)),
+                url('https://images.unsplash.com/photo-1575377427642-087cf684f29d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 80%, rgba(201, 167, 105, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 5.5rem;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            color: var(--cream);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1.2s forwards 0.5s;
+        }
+        
+        .hero h1 span {
+            color: var(--luxury-gold);
+            font-style: italic;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero h1 span:after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--luxury-gold);
+            transform: scaleX(0);
+            transform-origin: right;
+            animation: expandLine 1s forwards 1.5s;
+        }
+        
+        @keyframes expandLine {
+            to {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards 0.8s;
+        }
+        
+        .hero .btn {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards 1s;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--ivory);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 167, 105, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-content h3 {
+            font-size: 3.2rem;
+            margin-bottom: 35px;
+            color: var(--rich-brown);
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: fadeInLeft 1s forwards 0.3s;
+        }
+        
+        @keyframes fadeInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .about-content p {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: #555;
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: fadeInLeft 1s forwards 0.5s;
+        }
+        
+        .founder-info {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-light);
+            margin-top: 50px;
+            border-left: 5px solid var(--luxury-gold);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards 0.7s;
+        }
+        
+        .founder-info h4 {
+            font-size: 1.8rem;
+            color: var(--chocolate);
+            margin-bottom: 15px;
+        }
+        
+        .founder-info p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+            opacity: 0;
+            transform: translateX(50px);
+            animation: fadeInRight 1s forwards 0.5s;
+        }
+        
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .about-image:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 8px solid var(--luxury-gold);
+            border-radius: var(--radius-xl);
+            top: 25px;
+            left: 25px;
+            z-index: -1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.08);
+        }
+        
+        /* Group Companies */
+        .group-companies {
+            background: linear-gradient(135deg, var(--dark-chocolate) 0%, var(--rich-brown) 100%);
+            color: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .group-companies:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23c9a769' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: 0;
+        }
+        
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .company-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-lg);
+            padding: 50px 35px;
+            text-align: center;
+            border: 1px solid rgba(201, 167, 105, 0.2);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .company-card:nth-child(1) {
+            animation: fadeInUp 0.8s forwards 0.2s;
+        }
+        
+        .company-card:nth-child(2) {
+            animation: fadeInUp 0.8s forwards 0.4s;
+        }
+        
+        .company-card:nth-child(3) {
+            animation: fadeInUp 0.8s forwards 0.6s;
+        }
+        
+        .company-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--luxury-gold), var(--accent-gold));
+        }
+        
+        .company-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--luxury-gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .company-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(201, 167, 105, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 2.2rem;
+            color: var(--luxury-gold);
+            transition: var(--transition);
+        }
+        
+        .company-card:hover .company-icon {
+            background: var(--luxury-gold);
+            color: var(--primary-dark);
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .company-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--cream);
+        }
+        
+        .company-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .products:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23f0e6d2' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: 0;
+        }
+        
+        .products .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            position: relative;
+            opacity: 0;
+            transform: translateY(50px);
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-heavy);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .product-card:nth-child(1) { animation: fadeInUp 0.8s forwards 0.1s; }
+        .product-card:nth-child(2) { animation: fadeInUp 0.8s forwards 0.2s; }
+        .product-card:nth-child(3) { animation: fadeInUp 0.8s forwards 0.3s; }
+        .product-card:nth-child(4) { animation: fadeInUp 0.8s forwards 0.4s; }
+        .product-card:nth-child(5) { animation: fadeInUp 0.8s forwards 0.5s; }
+        .product-card:nth-child(6) { animation: fadeInUp 0.8s forwards 0.6s; }
+        .product-card:nth-child(7) { animation: fadeInUp 0.8s forwards 0.7s; }
+        .product-card:nth-child(8) { animation: fadeInUp 0.8s forwards 0.8s; }
+        .product-card:nth-child(9) { animation: fadeInUp 0.8s forwards 0.9s; }
+        .product-card:nth-child(10) { animation: fadeInUp 0.8s forwards 1.0s; }
+        .product-card:nth-child(11) { animation: fadeInUp 0.8s forwards 1.1s; }
+        
+        .product-image {
+            height: 280px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(26, 15, 0, 0.8));
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .product-category {
+            color: var(--white);
+            font-weight: 600;
+            background: var(--luxury-gold);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            display: inline-block;
+        }
+        
+        .product-content {
+            padding: 35px;
+        }
+        
+        .product-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--rich-brown);
+        }
+        
+        .product-content p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        /* B2B Services */
+        .services {
+            background: linear-gradient(135deg, var(--rich-brown) 0%, var(--primary-dark) 100%);
+            color: var(--cream);
+            position: relative;
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-lg);
+            padding: 50px 35px;
+            text-align: center;
+            border: 1px solid rgba(201, 167, 105, 0.2);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .service-card:nth-child(1) { animation: fadeInUp 0.8s forwards 0.2s; }
+        .service-card:nth-child(2) { animation: fadeInUp 0.8s forwards 0.4s; }
+        .service-card:nth-child(3) { animation: fadeInUp 0.8s forwards 0.6s; }
+        
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--luxury-gold), var(--accent-gold));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--luxury-gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(201, 167, 105, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 2.2rem;
+            color: var(--luxury-gold);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-icon {
+            background: var(--luxury-gold);
+            color: var(--primary-dark);
+            transform: scale(1.1);
+        }
+        
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--cream);
+        }
+        
+        .service-card p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Why Choose Us Section */
+        .features {
+            background-color: var(--ivory);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features:before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 167, 105, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .features .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            display: flex;
+            padding: 40px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .feature-card:nth-child(1) { animation: fadeInUp 0.8s forwards 0.1s; }
+        .feature-card:nth-child(2) { animation: fadeInUp 0.8s forwards 0.2s; }
+        .feature-card:nth-child(3) { animation: fadeInUp 0.8s forwards 0.3s; }
+        .feature-card:nth-child(4) { animation: fadeInUp 0.8s forwards 0.4s; }
+        .feature-card:nth-child(5) { animation: fadeInUp 0.8s forwards 0.5s; }
+        .feature-card:nth-child(6) { animation: fadeInUp 0.8s forwards 0.6s; }
+        
+        .feature-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--luxury-gold), var(--accent-gold));
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .feature-icon {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--luxury-gold), var(--accent-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            color: var(--white);
+            font-size: 2rem;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .feature-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--rich-brown);
+        }
+        
+        .feature-content p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background-color: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery:before {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 167, 105, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .gallery .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .gallery-item {
+            height: 350px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow-light);
+            opacity: 0;
+            transform: translateY(50px);
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        
+        .gallery-item:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .gallery-item:nth-child(1) { animation: fadeInUp 0.8s forwards 0.1s; }
+        .gallery-item:nth-child(2) { animation: fadeInUp 0.8s forwards 0.2s; }
+        .gallery-item:nth-child(3) { animation: fadeInUp 0.8s forwards 0.3s; }
+        .gallery-item:nth-child(4) { animation: fadeInUp 0.8s forwards 0.4s; }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 35px;
+            background: linear-gradient(to top, rgba(26, 15, 0, 0.9), transparent);
+            color: var(--white);
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gallery-overlay h4 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: var(--cream);
+        }
+        
+        .gallery-overlay p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--ivory);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact:before {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 167, 105, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 3rem;
+            margin-bottom: 35px;
+            color: var(--rich-brown);
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: fadeInLeft 1s forwards 0.3s;
+        }
+        
+        .contact-info p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: fadeInLeft 1s forwards 0.5s;
+        }
+        
+        .contact-details {
+            margin-top: 50px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        
+        .contact-item:nth-child(1) { animation: fadeInLeft 1s forwards 0.6s; }
+        .contact-item:nth-child(2) { animation: fadeInLeft 1s forwards 0.7s; }
+        .contact-item:nth-child(3) { animation: fadeInLeft 1s forwards 0.8s; }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--luxury-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover .contact-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: var(--chocolate);
+            color: var(--cream);
+        }
+        
+        .contact-text h4 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--rich-brown);
+        }
+        
+        .contact-text p {
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: 60px 50px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-heavy);
+            opacity: 0;
+            transform: translateX(50px);
+            animation: fadeInRight 1s forwards 0.5s;
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 18px 25px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            background-color: var(--ivory);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--luxury-gold);
+            box-shadow: 0 0 0 3px rgba(201, 167, 105, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 180px;
+            resize: vertical;
+        }
+        
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235a3a1c' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
+        }
+        
+        /* Availability Notice in Contact Section */
+        .availability-notice-contact {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--luxury-gold);
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            color: var(--primary-dark);
+            text-align: center;
+            box-shadow: var(--shadow-light);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--primary-dark);
+            color: var(--cream);
+            padding: 120px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--luxury-gold), var(--accent-gold));
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.6rem;
+            margin-bottom: 35px;
+            color: var(--luxury-gold);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: var(--luxury-gold);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            display: block;
+            color: var(--luxury-gold);
+            text-decoration: none;
+        }
+        
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 18px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a:hover {
+            color: var(--luxury-gold);
+            transform: translateX(8px);
+        }
+        
+        .footer-links a i {
+            margin-right: 12px;
+            color: var(--luxury-gold);
+            font-size: 0.9rem;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--cream);
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background: var(--luxury-gold);
+            color: var(--primary-dark);
+            transform: translateY(-8px) rotate(5deg);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1400px) {
+            h1 {
+                font-size: 4rem;
+            }
+            
+            h2 {
+                font-size: 3.2rem;
+            }
+            
+            .container {
+                padding: 0 50px;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 40px;
+            }
+            
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+            
+            .about-container,
+            .contact-container {
+                gap: 70px;
+            }
+            
+            .features-grid,
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .section-padding {
+                padding: 100px 0;
+            }
+            
+            .hero h1 {
+                font-size: 3.8rem;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 70px;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 70px;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background-color: rgba(26, 15, 0, 0.98);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 120px 50px 50px;
+                transition: var(--transition);
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-item {
+                margin: 20px 0;
+                width: 100%;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .section-header h2 {
+                font-size: 3.2rem;
+            }
+            
+            .features-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.3rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.8rem;
+            }
+            
+            .product-grid,
+            .companies-grid,
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                font-size: 2.3rem;
+            }
+            
+            .about-content h3 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-form {
+                padding: 40px 30px;
+            }
+            
+            .feature-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            
+            .feature-icon {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 30px;
+                right: 30px;
+                font-size: 25px;
+            }
+
+            .google-form-float {
+                width: 50px;
+                height: 50px;
+                bottom: 100px;
+                right: 30px;
+                font-size: 22px;
+            }
+
+            .form-choice-buttons {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 25px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .btn {
+                padding: 16px 35px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .footer-logo {
+                font-size: 2.5rem;
+            }
+            
+            .whatsapp-float {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 22px;
+            }
+
+            .google-form-float {
+                width: 45px;
+                height: 45px;
+                bottom: 80px;
+                right: 20px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/916362898414" class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Google Form Floating Button -->
+    <a href="#google-form" class="google-form-float" id="formFloat">
+        <i class="fas fa-file-alt"></i>
+        <span class="float-label">Business Form</span>
+    </a>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-crown"></i>
+                <span class="logo-text">Art of Cocoa</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#group" class="nav-link">Our Group</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#why-us" class="nav-link">Why Choose Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#showcase" class="nav-link">Showcase</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">B2B Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Art of <span>Cocoa</span></h1>
+                <p>Premium wholesale confectionery for corporates, supermarkets & bulk supply. Over a decade of excellence in B2B chocolate distribution and luxury gifting solutions.</p>
+                <a href="#products" class="btn">Explore Our Collections <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Art of Cocoa</h2>
+                <p class="section-subtitle">A legacy of excellence in premium wholesale confectionery and corporate gifting since 2015</p>
+            </div>
+            
+            <div class="about-container">
+                <div class="about-content">
+                    <h3>Your Premier B2B Confectionery Partner</h3>
+                    <p>Art of Cocoa stands as a beacon of quality and sophistication in the world of premium chocolates and confectionery. With over a decade of expertise, we've cultivated relationships with the finest producers worldwide to bring exceptional products to discerning B2B clients.</p>
+                    <p>Specializing in bulk supply to corporates, supermarkets, hotels, and event organizers, we understand that every business requirement is unique. Our portfolio ranges from everyday indulgences to luxury corporate gifts that make lasting impressions.</p>
+                    <p>Our commitment extends beyond supply - we craft lasting partnerships through reliability, quality assurance, and the artistry of fine confectionery.</p>
+                    
+                    <div class="founder-info">
+                        <h4>Arvind Patel</h4>
+                        <p>Founder & Managing Director</p>
+                        <p>With a vision to bring world-class confectionery to the Indian market, Arvind Patel established Art of Cocoa in 2015. His commitment to quality and customer relationships has built a legacy trusted by corporates nationwide.</p>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1575377427642-087cf684f29d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Art of Cocoa Premium Chocolates">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Companies Section -->
+    <section class="group-companies section-padding" id="group">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: var(--cream);">Our Group Companies</h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Part of a trusted network with decades of excellence in international trade</p>
+            </div>
+            
+            <div class="companies-grid">
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Atlantic Overseas</h3>
+                    <p>Specializing in international import of premium confectionery, beverages, and gourmet products with global sourcing expertise.</p>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Asia Trade Link</h3>
+                    <p>Connecting Asian markets with premium international brands, focusing on distribution networks and supply chain optimization.</p>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Apex Confectionery</h3>
+                    <p>Trading and distribution arm specializing in premium confectionery products and bulk supply solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products section-padding" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Collections</h2>
+                <p class="section-subtitle">Discover our comprehensive range of premium confectionery for B2B clients</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 - Premium Chocolates -->
+                <a href="product-premium-chocolates.html" class="product-card">
+                    <div class="product-image" style="background-image: url('https://i.pinimg.com/736x/7a/2c/46/7a2c4611f6873e9faddb9c22bd6823f6.jpg');">
+                        <div class="product-overlay">
+                            <span class="product-category">Core Collection</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Premium Chocolates</h3>
+                        <p>Milk, dark, white, and assorted chocolates in bulk packaging. Perfect for corporate gifts, hotel amenities, and supermarket shelves.</p>
+                    </div>
+                </a>
+                
+                <!-- Product 2 - Premium Imported Chocolates -->
+                <a href="product-premium-imported-chocolates.html" class="product-card">
+                    <div class="product-image" style="background-image: url('https://i.pinimg.com/1200x/05/1c/64/051c6420b441abbab064199e5485619c.jpg');">
+                        <div class="product-overlay">
+                            <span class="product-category">International</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Premium Imported Chocolates</h3>
+                        <p>Exclusive imported brands from Belgium, Switzerland, France, and Italy. Luxury selection for premium corporate gifting.</p>
+                    </div>
+                </a>
+                
+                <!-- Product 3 - Beverages -->
+                <a href="product-beverages.html" class="product-card">
+                    <div class="product-image" style="background-image: url(https://i.pinimg.com/736x/79/6c/34/796c34906c9111f02f41a319298a261b.jpg);">
+                        <div class="product-overlay">
+                            <span class="product-category">Refreshment</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Beverages</h3>
+                        <p>Premium juice-based drinks, ready-to-drink beverages, and specialty drinks that complement confectionery offerings.</p>
+                    </div>
+                </a>
+                
+                <!-- Product 4 - Cookies -->
+                <a href="product-cookies.html" class="product-card">
+                    <div class="product-image" style="background-image: url('https://i.pinimg.com/1200x/29/80/ea/2980ea58edd65c973d12f0d27a5a2f37.jpg');">
+                        <div class="product-overlay">
+                            <span class="product-category">Bakery</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Cookies</h3>
+                        <p>Assorted cookies, biscotti, and baked treats in bulk packaging for corporate hampers, cafes, and retail.</p>
+                    </div>
+                </a>
+                
+                <!-- Product 5 - Jellies & Gummies -->
+                <a href="product-jellies-gummies.html" class="product-card">
+                    <div class="product-image" style="background-image: url(https://i.pinimg.com/736x/72/2d/e2/722de24788ef8e36c2d60d30e1832215.jpg);">
+                        <div class="product-overlay">
+                            <span class="product-category">Fruity</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Jellies & Gummies</h3>
+                        <p>Bulk packs of fruit-flavored jellies and gummies in various shapes. Ideal for corporate events, office treats, and retail.</p>
+                    </div>
+                </a>
+                
+                <!-- Product 6 - Mints & Chewing Gum -->
+                <a href="product-mints-chewing-gum.html" class="product-card">
+                    <div class="product-image" style="background-image: url('https://i.pinimg.com/736x/42/7b/97/427b97c2a97a99495d0f2fb8802e2610.jpg');">
+                        <div class="product-overlay">
+                            <span class="product-category">Freshness</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Mints & Chewing Gum</h3>
+                        <p>Assorted flavors and formats for fresh breath. Available in bulk corporate packs and retail-ready packaging.</p>
+                    </div>
+                </a>
+                
+                <!-- Product 7 - Lollipops -->
+                <a href="product-lollipops.html" class="product-card">
+                    <div class="product-image" style="background-image: url('https://i.pinimg.com/736x/2c/f3/57/2cf3574570e8fce67f88f8d3f4bfd603.jpg');">
+                        <div class="product-overlay">
+                            <span class="product-category">Classic</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Lollipops</h3>
+                        <p>Colorful lollipops in various sizes and flavors. Perfect for promotional giveaways, events, and retail displays.</p>
+                    </div>
+                </a>
+                
+                <!-- Product 8 - Candies -->
+                <a href="product-candies.html" class="product-card">
+                    <div class="product-image" style="background-image: url(https://i.pinimg.com/1200x/e0/21/f7/e021f724878e7beaa5d20f3c1a612896.jpg);">
+                        <div class="product-overlay">
+                            <span class="product-category">Traditional</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Candies</h3>
+                        <p>Hard candies, toffees, caramels, and other classic confections in bulk for corporate needs and retail distribution.</p>
+                    </div>
+                </a>
+                
+                <!-- Product 9 - Toys Candies -->
+                <a href="product-toys-candies.html" class="product-card">
+                    <div class="product-image" style="background-image: url(https://i.pinimg.com/1200x/46/0b/a5/460ba545571472c14a10684d1e98f8f3.jpg);">
+                        <div class="product-overlay">
+                            <span class="product-category">Fun</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Toys Candies</h3>
+                        <p>Combination packs featuring toys with candy. Ideal for children's events, promotional campaigns, and seasonal offerings.</p>
+                    </div>
+                </a>
+                
+                <!-- Product 10 - Waffles -->
+                <a href="product-waffles.html" class="product-card">
+                    <div class="product-image" style="background-image: url(https://i.pinimg.com/1200x/90/1a/88/901a8806966fb013e2a64656c2e0b30b.jpg);">
+                        <div class="product-overlay">
+                            <span class="product-category">Specialty</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Waffles</h3>
+                        <p>Premium Belgian-style waffles and wafer biscuits. A gourmet addition to corporate gift hampers and premium retail.</p>
+                    </div>
+                </a>
+                
+                <!-- Product 11 - Marshmallow -->
+                <a href="product-marshmallow.html" class="product-card">
+                    <div class="product-image" style="background-image: url('https://i.pinimg.com/736x/17/b1/2d/17b12de8ca175a960d63ebd5ecbce9d4.jpg');">
+                        <div class="product-overlay">
+                            <span class="product-category">Soft Confectionery</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Marshmallow</h3>
+                        <p>Soft, fluffy marshmallows in various flavors and sizes. Perfect for hot beverages, desserts, and standalone treats.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="features section-padding" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Art of Cocoa</h2>
+                <p class="section-subtitle">What sets us apart in the world of premium confectionery</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Premium Quality</h3>
+                        <p>We source only the finest ingredients and premium brands for exceptional taste and quality assurance.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Imported & Trusted Brands</h3>
+                        <p>Direct imports of internationally renowned confectionery brands from Europe, USA, and Japan.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Bulk & Corporate Supply</h3>
+                        <p>Specialized solutions for corporate orders, hotels, events, and large-scale requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Custom Packaging Solutions</h3>
+                        <p>Tailored packaging designs that align with your brand identity and gifting requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Timely Delivery</h3>
+                        <p>Reliable nationwide delivery ensuring freshness and satisfaction for every order.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Dedicated Support</h3>
+                        <p>Personalized account management and dedicated support for corporate clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section-padding" id="showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>Art of Cocoa Showcase</h2>
+                <p class="section-subtitle">A visual journey through our premium collections and packaging</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Showcase 1 - Corporate Gift Hampers -->
+                <a href="showcase-corporate-hampers.html" class="gallery-item">
+                    <img src="https://i.pinimg.com/736x/a5/3c/bc/a53cbcd787470f6770c858a1cc940ced.jpg" alt="Corporate gift hampers">
+                    <div class="gallery-overlay">
+                        <h4>Corporate Gift Hampers</h4>
+                        <p>Customized corporate solutions</p>
+                    </div>
+                </a>
+                
+                <!-- Showcase 2 - Festive Gift Boxes -->
+                <a href="showcase-festive-boxes.html" class="gallery-item">
+                    <img src="https://i.pinimg.com/1200x/4f/c1/86/4fc186a790a8e5a2c33d9d8dd394fbe9.jpg" alt="Festive gift boxes">
+                    <div class="gallery-overlay">
+                        <h4>Festive Gift Boxes</h4>
+                        <p>Seasonal special collections</p>
+                    </div>
+                </a>
+                
+                <!-- Showcase 3 - Imported Confectionery -->
+                <a href="showcase-imported-confectionery.html" class="gallery-item">
+                    <img src="https://i.pinimg.com/736x/7d/23/11/7d23117a31b83f2fd9195046ee905bca.jpg" alt="Imported confectionery">
+                    <div class="gallery-overlay">
+                        <h4>Imported Confectionery</h4>
+                        <p>International premium brands</p>
+                    </div>
+                </a>
+                
+                <!-- Showcase 4 - Luxury Chocolate Packaging -->
+                <a href="showcase-luxury-packaging.html" class="gallery-item">
+                    <img src="https://i.pinimg.com/1200x/b3/33/e6/b333e6183246c222a0df25e97afd12ea.jpg" alt="Luxury chocolate packaging">
+                    <div class="gallery-overlay">
+                        <h4>Luxury Chocolate Packaging</h4>
+                        <p>Premium boxes and wrappers</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B Services Section -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: var(--cream);">B2B Services</h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Comprehensive solutions for corporates, supermarkets, and bulk buyers</p>
+            </div>
+            
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Gifting</h3>
+                    <p>Customized gift solutions for employee appreciation, client gifts, festive hampers, and corporate events.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Supermarket Supply</h3>
+                    <p>Reliable bulk supply for retail chains with volume pricing and consistent quality assurance.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3>Hotel & Hospitality</h3>
+                    <p>Premium amenities for luxury hotels, customized minibar solutions, and conference/event catering supplies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Art of Cocoa</h2>
+                <p class="section-subtitle">Get in touch for bulk orders, corporate gifting, or partnership inquiries</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Connect With Our Team</h3>
+                    <p>Reach out to our dedicated B2B team for personalized consultations, product catalogs, or to discuss your bulk supply requirements. We're here to help you create sweet moments of excellence for your business.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone Number</h4>
+                                <p>+91 6362898414</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Address</h4>
+                                <p>sales@artofcocoa.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Business Address</h4>
+                                <p>No.20, 2nd Cross, Shankarappa Garden,<br>Magadi Road, Bangalore-560023</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Availability Notice moved to Contact Section -->
+                    <div class="availability-notice-contact">
+                        <strong>Note:</strong> Products shown are for representation. Actual delivery depends on availability.
+                    </div>
+                    
+                    <div class="form-choice-buttons">
+                        <button class="btn-form-choice active" data-form="quick">Quick Inquiry Form</button>
+                    </div>
+                </div>
+                
+                <!-- Quick Inquiry Form -->
+                <div class="contact-form active" id="quick-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Your Phone Number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Company Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select class="form-control form-select" required>
+                                <option value="" disabled selected>Select Inquiry Type</option>
+                                <option value="corporate">Corporate Gifting</option>
+                                <option value="bulk">Bulk Order Inquiry</option>
+                                <option value="supermarket">Supermarket Supply</option>
+                                <option value="hotel">Hotel & Hospitality</option>
+                                <option value="other">Other Business Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Business Requirements" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Business Inquiry <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+                
+                <!-- Embedded Google Form -->
+                <div class="contact-form google-form-container" id="google-form">
+                    <div class="form-header">
+                        <h3><i class="fab fa-google"></i> Detailed Business Inquiry</h3>
+                        <p>Fill this comprehensive form for detailed quotations and bulk orders</p>
+                    </div>
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfAyVA3eE6Yj6ewSPw6/viewform?embedded=true" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        style="border-radius: 10px; border: 1px solid #eee;"
+                        title="Art of Cocoa Business Inquiry Form">
+                        Loading…
+                    </iframe>
+                    <div class="form-footer">
+                        <p><i class="fas fa-lock"></i> Your information is secure with Google Forms</p>
+                        <a href="https://forms.gle/AyVA3eE6Yj6ewSPw6" target="_blank" class="btn-link">
+                            <i class="fas fa-external-link-alt"></i> Open form in new tab
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">Art of Cocoa</a>
+                    <p>Purveyors of premium wholesale confectionery, imported chocolates, and bespoke corporate gifting solutions since 2015. Where business excellence meets indulgence.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#group"><i class="fas fa-chevron-right"></i> Our Group</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Products</a></li>
+                        <li><a href="#why-us"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                        <li><a href="#showcase"><i class="fas fa-chevron-right"></i> Showcase</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> B2B Services</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Product Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="product-premium-chocolates.html"><i class="fas fa-chevron-right"></i> Premium Chocolates</a></li>
+                        <li><a href="product-premium-imported-chocolates.html"><i class="fas fa-chevron-right"></i> Imported Chocolates</a></li>
+                        <li><a href="product-beverages.html"><i class="fas fa-chevron-right"></i> Beverages</a></li>
+                        <li><a href="product-cookies.html"><i class="fas fa-chevron-right"></i> Cookies</a></li>
+                        <li><a href="product-jellies-gummies.html"><i class="fas fa-chevron-right"></i> Jellies & Gummies</a></li>
+                        <li><a href="product-mints-chewing-gum.html"><i class="fas fa-chevron-right"></i> Mints & Chewing Gum</a></li>
+                        <li><a href="product-candies.html"><i class="fas fa-chevron-right"></i> Candies</a></li>
+                        <li><a href="product-marshmallow.html"><i class="fas fa-chevron-right"></i> Marshmallow</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Business Hours</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-clock"></i> Monday - Friday: 8am - 8pm</li>
+                        <li><i class="fas fa-clock"></i> Saturday: 9am - 6pm</li>
+                        <li><i class="fas fa-clock"></i> Sunday: 10am - 4pm</li>
+                        <li><i class="fas fa-clock"></i> Bulk Orders: 24/7 Support</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Art of Cocoa. All rights reserved. | Premium B2B Confectionery & Bulk Supply</p>
+                <p>Website: artofcocoa.com | Email: sales@artofcocoa.com | Phone: +91 6362898414</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const name = contactForm.querySelector('input[type="text"]').value;
+            const company = contactForm.querySelector('input[placeholder="Company Name"]').value;
+            const inquiryType = contactForm.querySelector('select').value;
+            
+            // Show success message
+            alert(`Thank you ${name} from ${company}! Your ${inquiryType} inquiry has been received. Our B2B team will contact you within 24 hours.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animate elements on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.product-card, .company-card, .service-card, .contact-item, .feature-card, .gallery-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if(elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Initialize animations
+        window.addEventListener('load', () => {
+            // Trigger initial animations
+            animateOnScroll();
+            
+            // Add animation to logo on load
+            const logo = document.querySelector('.logo');
+            setTimeout(() => {
+                logo.style.transform = 'translateY(0)';
+                logo.style.opacity = '1';
+            }, 300);
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Add parallax effect to hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+
+        // Form switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const formChoiceButtons = document.querySelectorAll('.btn-form-choice');
+            const quickForm = document.getElementById('quick-form');
+            const googleForm = document.getElementById('google-form');
+            
+            formChoiceButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    formChoiceButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show selected form
+                    const formType = this.getAttribute('data-form');
+                    
+                    if (formType === 'quick') {
+                        quickForm.classList.add('active');
+                        googleForm.classList.remove('active');
+                    } else {
+                        quickForm.classList.remove('active');
+                        googleForm.classList.add('active');
+                    }
+                });
+            });
+            
+            // Auto-adjust iframe height based on content
+            const iframe = document.querySelector('.google-form-container iframe');
+            iframe.onload = function() {
+                this.style.height = this.contentWindow.document.body.scrollHeight + 'px';
+            };
+        });
+
+        // Floating form button functionality
+        document.getElementById('formFloat').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Switch to Google Form
+            document.querySelectorAll('.btn-form-choice').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.btn-form-choice[data-form="detailed"]').classList.add('active');
+            
+            document.getElementById('quick-form').classList.remove('active');
+            document.getElementById('google-form').classList.add('active');
+            
+            // Scroll to form
+            window.scrollTo({
+                top: document.getElementById('contact').offsetTop - 100,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
