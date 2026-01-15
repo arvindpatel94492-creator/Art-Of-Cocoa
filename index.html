@@ -226,7 +226,8 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Rest of your existing styles remain the same */
+        /* Rest of your existing styles remain the same -->
+        /* I'm keeping all your existing styles here, just showing the beginning */
         :root {
             --primary-dark: #1a0f00;
             --rich-brown: #3c280d;
@@ -1319,6 +1320,11 @@
             opacity: 0;
             transform: translateX(50px);
             animation: fadeInRight 1s forwards 0.5s;
+            display: none;
+        }
+        
+        .contact-form.active {
+            display: block;
         }
         
         .form-group {
@@ -1355,17 +1361,46 @@
             background-size: 16px;
         }
         
-        /* Availability Notice in Contact Section */
-        .availability-notice-contact {
-            margin-top: 40px;
+        /* Form Status Box */
+        .form-status-box {
+            margin-top: 30px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid var(--luxury-gold);
-            border-radius: var(--radius);
-            font-size: 0.9rem;
-            color: var(--primary-dark);
-            text-align: center;
-            box-shadow: var(--shadow-light);
+            background: rgba(201, 167, 105, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid var(--luxury-gold);
+        }
+        
+        .form-status-box h4 {
+            margin-bottom: 10px;
+            color: var(--rich-brown);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-status-box h4 i {
+            margin-right: 10px;
+            color: #25d366;
+        }
+        
+        .form-status-box p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .view-responses-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--luxury-gold);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        
+        .view-responses-link:hover {
+            color: var(--chocolate);
+            text-decoration: underline;
         }
         
         /* Footer */
@@ -1487,7 +1522,8 @@
             font-size: 1rem;
         }
         
-        /* Responsive Styles */
+        /* Responsive Styles -->
+        /* Keeping all responsive styles as is -->
         @media (max-width: 1400px) {
             h1 {
                 font-size: 4rem;
@@ -1696,12 +1732,6 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Google Form Floating Button -->
-    <a href="#google-form" class="google-form-float" id="formFloat">
-        <i class="fas fa-file-alt"></i>
-        <span class="float-label">Business Form</span>
-    </a>
-    
     <!-- Header -->
     <header class="header" id="header">
         <div class="container nav-container">
@@ -2143,7 +2173,7 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Connect With Our Team</h3>
-                    <p>Reach out to our dedicated B2B team for personalized consultations, product catalogs, or to discuss your bulk supply requirements. We're here to help you create sweet moments of excellence for your business.</p>
+                    <p>Reach out to our dedicated B2B team for personalized consultations, product catalogs, or to discuss your bulk supply requirements.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
@@ -2177,64 +2207,49 @@
                         </div>
                     </div>
                     
-                    <!-- Availability Notice moved to Contact Section -->
-                    <div class="availability-notice-contact">
-                        <strong>Note:</strong> Products shown are for representation. Actual delivery depends on availability.
-                    </div>
-                    
+                    <!-- Form Choice Buttons -->
                     <div class="form-choice-buttons">
                         <button class="btn-form-choice active" data-form="quick">Quick Inquiry Form</button>
+                        <button class="btn-form-choice" data-form="detailed">Google Business Form</button>
                     </div>
                 </div>
                 
+                    <!-- HIDDEN GOOGLE FORM IFRAME -->
+                    <iframe name="hidden-iframe" style="display:none;"></iframe>
+
                 <!-- Quick Inquiry Form -->
                 <div class="contact-form active" id="quick-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Your Phone Number">
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Company Name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <select class="form-control form-select" required>
-                                <option value="" disabled selected>Select Inquiry Type</option>
-                                <option value="corporate">Corporate Gifting</option>
-                                <option value="bulk">Bulk Order Inquiry</option>
-                                <option value="supermarket">Supermarket Supply</option>
-                                <option value="hotel">Hotel & Hospitality</option>
-                                <option value="other">Other Business Inquiry</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Business Requirements" rows="6" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Send Business Inquiry <i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
-                
-                <!-- Embedded Google Form -->
-                <div class="contact-form google-form-container" id="google-form">
                     <div class="form-header">
-                        <h3><i class="fab fa-google"></i> Detailed Business Inquiry</h3>
-                        <p>Fill this comprehensive form for detailed quotations and bulk orders</p>
+                        <h3><i class="fas fa-bolt"></i> Quick Business Inquiry</h3>
+                        <p>Fill this form for a quick response. This submits directly to Google Forms.</p>
                     </div>
+                    
+                    <!-- ACTUAL GOOGLE FORM for Quick Inquiry -->
                     <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfAyVA3eE6Yj6ewSPw6/viewform?embedded=true" 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSf4fPK3VsTbwDNLFwSjlfz2i41rXCgQjmNLMRE5OwTzA52SGQ/viewform?embedded=true&usp=pp_url&entry.2005620554=&entry.1065046570=&entry.1166974658=&entry.839337160=&entry.714807159=" 
                         width="100%" 
-                        height="600" 
+                        height="650" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        style="border-radius: 10px; border: 1px solid #eee;"
+                        title="Art of Cocoa Quick Business Inquiry"
+                        id="quick-form-iframe">
+                        Loading…
+                    </iframe>
+                
+                <!-- Google Form (Detailed) -->
+                <div class="contact-form" id="google-form">
+                    <div class="form-header">
+                        <h3><i class="fab fa-google"></i> Detailed Business Inquiry Form</h3>
+                        <p>This form submits directly to our Google Forms. All responses are recorded.</p>
+                    </div>
+                    
+                    <!-- YOUR ACTUAL GOOGLE FORM -->
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSf4fPK3VsTbwDNLFwSjlfz2i41rXCgQjmNLMRE5OwTzA52SGQ/viewform?embedded=true" 
+                        width="100%" 
+                        height="650" 
                         frameborder="0" 
                         marginheight="0" 
                         marginwidth="0"
@@ -2242,9 +2257,20 @@
                         title="Art of Cocoa Business Inquiry Form">
                         Loading…
                     </iframe>
+                    
                     <div class="form-footer">
-                        <p><i class="fas fa-lock"></i> Your information is secure with Google Forms</p>
-                        <a href="https://forms.gle/AyVA3eE6Yj6ewSPw6" target="_blank" class="btn-link">
+                        <p><i class="fas fa-check-circle" style="color:#25d366;"></i> <strong>Form is Active & Collecting Responses</strong></p>
+                        <p><i class="fas fa-shield-alt"></i> Secure Google Form Submission</p>
+                        <p><i class="fas fa-database"></i> Responses are saved to Google Forms database</p>
+                        <div style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                            <p style="margin-bottom: 5px;"><i class="fas fa-eye"></i> <strong>To View Responses:</strong></p>
+                            <ol style="margin-left: 20px; text-align: left; font-size: 0.85rem;">
+                                <li>Go to <a href="https://docs.google.com/forms/d/1z613caPTZNZMAUa1OJKXWgx6bC-Wn7c-sZqnVLWVqZw/edit" target="_blank" style="color: var(--luxury-gold);">your Google Form</a></li>
+                                <li>Click "Responses" tab at the top</li>
+                                <li>View responses or click 📊 to export to Sheets</li>
+                            </ol>
+                        </div>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4fPK3VsTbwDNLFwSjlfz2i41rXCgQjmNLMRE5OwTzA52SGQ/viewform" target="_blank" class="btn-link" style="margin-top: 15px;">
                             <i class="fas fa-external-link-alt"></i> Open form in new tab
                         </a>
                     </div>
@@ -2344,23 +2370,6 @@
             }
         });
         
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form data
-            const name = contactForm.querySelector('input[type="text"]').value;
-            const company = contactForm.querySelector('input[placeholder="Company Name"]').value;
-            const inquiryType = contactForm.querySelector('select').value;
-            
-            // Show success message
-            alert(`Thank you ${name} from ${company}! Your ${inquiryType} inquiry has been received. Our B2B team will contact you within 24 hours.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
-        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -2394,6 +2403,40 @@
             });
         };
         
+        // Form switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const formChoiceButtons = document.querySelectorAll('.btn-form-choice');
+            const quickForm = document.getElementById('quick-form');
+            const googleForm = document.getElementById('google-form');
+            
+            formChoiceButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    formChoiceButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show selected form
+                    const formType = this.getAttribute('data-form');
+                    
+                    if (formType === 'quick') {
+                        quickForm.classList.add('active');
+                        googleForm.classList.remove('active');
+                        
+                        // Refresh iframe to ensure it loads properly
+                        const iframe = quickForm.querySelector('iframe');
+                        iframe.src = iframe.src;
+                    } else {
+                        quickForm.classList.remove('active');
+                        googleForm.classList.add('active');
+                        
+                        // Refresh iframe to ensure it loads properly
+                        const iframe = googleForm.querySelector('iframe');
+                        iframe.src = iframe.src;
+                    }
+                });
+            });
+        });
+        
         // Initialize animations
         window.addEventListener('load', () => {
             // Trigger initial animations
@@ -2416,54 +2459,12 @@
             hero.style.transform = `translateY(${scrolled * 0.5}px)`;
         });
 
-        // Form switching functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const formChoiceButtons = document.querySelectorAll('.btn-form-choice');
-            const quickForm = document.getElementById('quick-form');
-            const googleForm = document.getElementById('google-form');
-            
-            formChoiceButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Update active button
-                    formChoiceButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Show selected form
-                    const formType = this.getAttribute('data-form');
-                    
-                    if (formType === 'quick') {
-                        quickForm.classList.add('active');
-                        googleForm.classList.remove('active');
-                    } else {
-                        quickForm.classList.remove('active');
-                        googleForm.classList.add('active');
-                    }
-                });
-            });
-            
-            // Auto-adjust iframe height based on content
-            const iframe = document.querySelector('.google-form-container iframe');
-            iframe.onload = function() {
-                this.style.height = this.contentWindow.document.body.scrollHeight + 'px';
-            };
-        });
-
-        // Floating form button functionality
-        document.getElementById('formFloat').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Switch to Google Form
-            document.querySelectorAll('.btn-form-choice').forEach(btn => btn.classList.remove('active'));
-            document.querySelector('.btn-form-choice[data-form="detailed"]').classList.add('active');
-            
-            document.getElementById('quick-form').classList.remove('active');
-            document.getElementById('google-form').classList.add('active');
-            
-            // Scroll to form
-            window.scrollTo({
-                top: document.getElementById('contact').offsetTop - 100,
-                behavior: 'smooth'
-            });
+        // Google Form response tracking
+        window.addEventListener('message', function(event) {
+            if (event.origin === 'https://docs.google.com') {
+                console.log('Google Form message received:', event.data);
+                // You can add tracking for form submissions here
+            }
         });
     </script>
 </body>
