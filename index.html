@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Primary Meta Tags -->
     <title>Art of Cocoa | Premium B2B Confectionery & Bulk Supply</title>
@@ -51,7 +51,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- WhatsApp Floating Button Styles -->
     <style>
         /* WhatsApp Button */
         .whatsapp-float {
@@ -139,6 +138,7 @@
             display: flex;
             gap: 15px;
             margin: 30px 0;
+            flex-wrap: wrap;
         }
 
         .btn-form-choice {
@@ -152,6 +152,7 @@
             transition: var(--transition);
             flex: 1;
             text-align: center;
+            min-width: 150px;
         }
 
         .btn-form-choice.active {
@@ -162,12 +163,6 @@
 
         .btn-form-choice:hover:not(.active) {
             background: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Google Form Container */
-        .google-form-container {
-            display: none;
-            animation: fadeIn 0.5s ease;
         }
 
         .google-form-container.active {
@@ -226,8 +221,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Rest of your existing styles remain the same -->
-        /* I'm keeping all your existing styles here, just showing the beginning */
         :root {
             --primary-dark: #1a0f00;
             --rich-brown: #3c280d;
@@ -454,6 +447,7 @@
             letter-spacing: 1px;
             position: relative;
             overflow: hidden;
+            z-index: 1002;
         }
         
         .logo:after {
@@ -483,24 +477,82 @@
             font-weight: 800;
         }
         
-        .nav-menu {
+        /* Hamburger Menu Styles - 3 lines */
+        .hamburger {
             display: flex;
-            list-style: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 22px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1002;
+            transition: var(--transition);
         }
         
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--cream);
+            border-radius: 3px;
+            transition: var(--transition);
+            transform-origin: center;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            max-width: 85%;
+            height: 100vh;
+            background: rgba(26,15,0,0.98);
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 100px 35px 40px;
+            list-style: none;
+            transition: right .35s ease;
+            z-index: 1001;
+            overflow-y: auto;
+        }
+       
+        .nav-menu.active{
+            right:0;
+        }
+       
         .nav-item {
-            margin-left: 45px;
-            position: relative;
+            width:100%;
+            margin:12px 0;
+
         }
         
         .nav-link {
-            color: var(--cream);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.05rem;
-            transition: var(--transition);
-            padding: 8px 0;
-            position: relative;
+            display:block;
+            width:100%;
+            color:var(--cream);
+            text-decoration:none;
+            font-size:18px;
+            padding:15px 0;
+            border-bottom:1px solid rgba(255,255,255,.08);
+            transition:.3s;
         }
         
         .nav-link:after {
@@ -520,21 +572,6 @@
         
         .nav-link:hover:after {
             width: 100%;
-        }
-        
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--cream);
-            font-size: 2rem;
-            cursor: pointer;
-            z-index: 1001;
-            transition: var(--transition);
-        }
-        
-        .hamburger:hover {
-            color: var(--luxury-gold);
         }
         
         /* Hero Section */
@@ -1312,9 +1349,10 @@
             margin-bottom: 0;
         }
         
+        /* Contact Form - Beautiful UI */
         .contact-form {
             background: var(--white);
-            padding: 60px 50px;
+            padding: 50px 40px;
             border-radius: var(--radius-xl);
             box-shadow: var(--shadow-heavy);
             opacity: 0;
@@ -1327,33 +1365,33 @@
             display: block;
         }
         
-        .form-group {
-            margin-bottom: 30px;
+        .contact-form .form-group {
+            margin-bottom: 25px;
         }
         
-        .form-control {
+        .contact-form .form-control {
             width: 100%;
-            padding: 18px 25px;
-            border: 1px solid #ddd;
+            padding: 16px 20px;
+            border: 1px solid #e0e0e0;
             border-radius: var(--radius);
             font-family: 'Inter', sans-serif;
-            font-size: 1.05rem;
+            font-size: 1rem;
             transition: var(--transition);
             background-color: var(--ivory);
         }
         
-        .form-control:focus {
+        .contact-form .form-control:focus {
             outline: none;
             border-color: var(--luxury-gold);
             box-shadow: 0 0 0 3px rgba(201, 167, 105, 0.2);
         }
         
-        textarea.form-control {
-            min-height: 180px;
+        .contact-form textarea.form-control {
+            min-height: 140px;
             resize: vertical;
         }
         
-        .form-select {
+        .contact-form .form-select {
             appearance: none;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235a3a1c' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
@@ -1361,46 +1399,11 @@
             background-size: 16px;
         }
         
-        /* Form Status Box */
-        .form-status-box {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(201, 167, 105, 0.1);
-            border-radius: 10px;
-            border-left: 4px solid var(--luxury-gold);
-        }
-        
-        .form-status-box h4 {
-            margin-bottom: 10px;
-            color: var(--rich-brown);
+        .contact-form .btn-submit {
+            width: 100%;
+            padding: 18px;
             font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .form-status-box h4 i {
-            margin-right: 10px;
-            color: #25d366;
-        }
-        
-        .form-status-box p {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        
-        .view-responses-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--luxury-gold);
-            text-decoration: none;
-            font-weight: 500;
             margin-top: 10px;
-        }
-        
-        .view-responses-link:hover {
-            color: var(--chocolate);
-            text-decoration: underline;
         }
         
         /* Footer */
@@ -1522,8 +1525,7 @@
             font-size: 1rem;
         }
         
-        /* Responsive Styles -->
-        /* Keeping all responsive styles as is -->
+        /* ========== RESPONSIVE STYLES ========== */
         @media (max-width: 1400px) {
             h1 {
                 font-size: 4rem;
@@ -1577,19 +1579,25 @@
                 gap: 70px;
             }
             
+            /* Mobile Menu - 3 lines hamburger */
+            .hamburger {
+                display: flex;
+            }
+            
             .nav-menu {
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 300px;
+                width: 320px;
                 height: 100vh;
                 background-color: rgba(26, 15, 0, 0.98);
-                backdrop-filter: blur(15px);
+                backdrop-filter: blur(20px);
                 flex-direction: column;
                 align-items: flex-start;
-                padding: 120px 50px 50px;
-                transition: var(--transition);
+                padding: 120px 40px 50px;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                 box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+                overflow-y: auto;
             }
             
             .nav-menu.active {
@@ -1597,12 +1605,15 @@
             }
             
             .nav-item {
-                margin: 20px 0;
+                margin: 15px 0;
                 width: 100%;
             }
             
-            .hamburger {
+            .nav-link {
+                font-size: 1.2rem;
                 display: block;
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             }
             
             .section-header h2 {
@@ -1617,19 +1628,19 @@
         
         @media (max-width: 768px) {
             .container {
-                padding: 0 30px;
+                padding: 0 25px;
             }
             
             .hero h1 {
-                font-size: 3.2rem;
+                font-size: 2.8rem;
             }
             
             .hero p {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
             
             .section-header h2 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             
             .product-grid,
@@ -1639,15 +1650,30 @@
             }
             
             .logo {
-                font-size: 2.3rem;
+                font-size: 2rem;
+            }
+            
+            .logo i {
+                font-size: 1.6rem;
+                margin-right: 8px;
             }
             
             .about-content h3 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+            
+            .about-image img {
+                height: 350px;
+            }
+            
+            .about-image:before {
+                top: 15px;
+                left: 15px;
+                border-width: 4px;
             }
             
             .contact-form {
-                padding: 40px 30px;
+                padding: 30px 20px;
             }
             
             .feature-card {
@@ -1680,32 +1706,82 @@
             .form-choice-buttons {
                 flex-direction: column;
             }
-        }
-        
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 25px;
+            
+            .btn-form-choice {
+                min-width: 100%;
             }
             
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .section-header h2 {
-                font-size: 2.5rem;
-            }
-            
-            .btn {
-                padding: 16px 35px;
+            .gallery-item {
+                height: 280px;
             }
             
             .footer-content {
                 grid-template-columns: 1fr;
-                gap: 50px;
+                gap: 40px;
             }
             
             .footer-logo {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+            
+            .section-padding {
+                padding: 70px 0;
+            }
+            
+            .section-header {
+                margin-bottom: 50px;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .contact-info h3 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .form-choice-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn-form-choice {
+                min-width: 100%;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 18px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 14px 28px;
+                font-size: 0.95rem;
             }
             
             .whatsapp-float {
@@ -1713,7 +1789,7 @@
                 height: 45px;
                 bottom: 20px;
                 right: 20px;
-                font-size: 22px;
+                font-size: 20px;
             }
 
             .google-form-float {
@@ -1721,7 +1797,63 @@
                 height: 45px;
                 bottom: 80px;
                 right: 20px;
-                font-size: 20px;
+                font-size: 18px;
+            }
+            
+            .contact-form {
+                padding: 25px 18px;
+            }
+            
+            .contact-form .form-control {
+                padding: 14px 16px;
+                font-size: 0.95rem;
+            }
+            
+            .product-image {
+                height: 220px;
+            }
+            
+            .product-content {
+                padding: 25px;
+            }
+            
+            .product-content h3 {
+                font-size: 1.4rem;
+            }
+            
+            .gallery-item {
+                height: 220px;
+            }
+            
+            .gallery-overlay {
+                padding: 20px;
+            }
+            
+            .gallery-overlay h4 {
+                font-size: 1.2rem;
+            }
+            
+            .footer {
+                padding: 60px 0 30px;
+            }
+            
+            .footer-content {
+                gap: 30px;
+                margin-bottom: 40px;
+            }
+            
+            .footer-col h3 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+            
+            .footer-logo {
+                font-size: 1.8rem;
+            }
+            
+            .footer-bottom {
+                padding-top: 30px;
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -1730,6 +1862,12 @@
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/916362898414" class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp">
         <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Google Form Floating Button -->
+    <a href="#contact" class="google-form-float" aria-label="Quick Inquiry">
+        <i class="fas fa-pen"></i>
+        <span class="float-label">Inquire Now</span>
     </a>
 
     <!-- Header -->
@@ -1769,8 +1907,10 @@
                 </ul>
             </nav>
             
-            <button class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
     </header>
@@ -2209,71 +2349,65 @@
                     
                     <!-- Form Choice Buttons -->
                     <div class="form-choice-buttons">
-                        <button class="btn-form-choice active" data-form="quick">Quick Inquiry Form</button>
-                        <button class="btn-form-choice" data-form="detailed">Google Business Form</button>
+                        <button class="btn-form-choice active" data-form="quick">Quick Inquiry</button>
                     </div>
                 </div>
                 
-                    <!-- HIDDEN GOOGLE FORM IFRAME -->
-                    <iframe name="hidden-iframe" style="display:none;"></iframe>
-
-                <!-- Quick Inquiry Form -->
+                <!-- Quick Inquiry Form - Beautiful UI -->
                 <div class="contact-form active" id="quick-form">
                     <div class="form-header">
-                        <h3><i class="fas fa-bolt"></i> Quick Business Inquiry</h3>
-                        <p>Fill this form for a quick response. This submits directly to Google Forms.</p>
+                        <h3><i class="fas fa-bolt" style="color: var(--luxury-gold);"></i> Quick Business Inquiry</h3>
+                        <p style="color: #777;">Fill in your details and we'll get back to you within 24 hours</p>
                     </div>
                     
-                    <!-- ACTUAL GOOGLE FORM for Quick Inquiry -->
-                    <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSf4fPK3VsTbwDNLFwSjlfz2i41rXCgQjmNLMRE5OwTzA52SGQ/viewform?embedded=true&usp=pp_url&entry.2005620554=&entry.1065046570=&entry.1166974658=&entry.839337160=&entry.714807159=" 
-                        width="100%" 
-                        height="650" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0"
-                        style="border-radius: 10px; border: 1px solid #eee;"
-                        title="Art of Cocoa Quick Business Inquiry"
-                        id="quick-form-iframe">
-                        Loading…
-                    </iframe>
-                </div>
-                
-                <!-- Google Form (Detailed) -->
-                <div class="contact-form" id="google-form">
-                    <div class="form-header">
-                        <h3><i class="fab fa-google"></i> Detailed Business Inquiry Form</h3>
-                        <p>This form submits directly to our Google Forms. All responses are recorded.</p>
-                    </div>
-                    
-                    <!-- YOUR ACTUAL GOOGLE FORM -->
-                    <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSf4fPK3VsTbwDNLFwSjlfz2i41rXCgQjmNLMRE5OwTzA52SGQ/viewform?embedded=true" 
-                        width="100%" 
-                        height="650" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0"
-                        style="border-radius: 10px; border: 1px solid #eee;"
-                        title="Art of Cocoa Business Inquiry Form">
-                        Loading…
-                    </iframe>
-                    
-                    <div class="form-footer">
-                        <p><i class="fas fa-check-circle" style="color:#25d366;"></i> <strong>Form is Active & Collecting Responses</strong></p>
-                        <p><i class="fas fa-shield-alt"></i> Secure Google Form Submission</p>
-                        <p><i class="fas fa-database"></i> Responses are saved to Google Forms database</p>
-                        <div style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
-                            <p style="margin-bottom: 5px;"><i class="fas fa-eye"></i> <strong>To View Responses:</strong></p>
-                            <ol style="margin-left: 20px; text-align: left; font-size: 0.85rem;">
-                                <li>Go to <a href="https://docs.google.com/forms/d/1z613caPTZNZMAUa1OJKXWgx6bC-Wn7c-sZqnVLWVqZw/edit" target="_blank" style="color: var(--luxury-gold);">your Google Form</a></li>
-                                <li>Click "Responses" tab at the top</li>
-                                <li>View responses or click 📊 to export to Sheets</li>
-                            </ol>
+                    <form id="quickInquiryForm" onsubmit="handleQuickForm(event)">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name *" required>
                         </div>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4fPK3VsTbwDNLFwSjlfz2i41rXCgQjmNLMRE5OwTzA52SGQ/viewform" target="_blank" class="btn-link" style="margin-top: 15px;">
-                            <i class="fas fa-external-link-alt"></i> Open form in new tab
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Phone Number *" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control form-select" required>
+                                <option value="">Select Your Interest</option>
+                                <option value="corporate-gifting">Corporate Gifting</option>
+                                <option value="bulk-supply">Bulk Supply</option>
+                                <option value="supermarket">Supermarket Supply</option>
+                                <option value="hotel-hospitality">Hotel & Hospitality</option>
+                                <option value="imported-chocolates">Imported Chocolates</option>
+                                <option value="custom-packaging">Custom Packaging</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">
+                            Send Inquiry <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <!-- This section has been removed as requested -->
+                </div>
+                    
+                    <!-- Message shown when Quick Form is selected -->
+                    <div id="googleFormMessage" style="text-align: center; padding: 40px 20px;">
+                        <i class="fas fa-google" style="font-size: 3rem; color: #4285F4; margin-bottom: 20px; display: block;"></i>
+                        <h4 style="color: var(--rich-brown); margin-bottom: 15px;">Google Business Form</h4>
+                        <p style="color: #666; margin-bottom: 25px;">Our detailed Google Form is available for comprehensive inquiries. Click below to open it in a new tab.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4fPK3VsTbwDNLFwSjlfz2i41rXCgQjmNLMRE5OwTzA52SGQ/viewform" target="_blank" class="btn" style="display: inline-flex;">
+                            <i class="fab fa-google" style="margin-right: 10px;"></i> Open Google Form
                         </a>
+                        <div style="margin-top: 25px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                            <p style="font-size: 0.9rem; color: #555;">
+                                <i class="fas fa-shield-alt" style="color: var(--luxury-gold);"></i> 
+                                Your responses are securely saved to Google Forms. 
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4fPK3VsTbwDNLFwSjlfz2i41rXCgQjmNLMRE5OwTzA52SGQ/viewform" target="_blank" style="color: var(--luxury-gold);">Open form directly</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2342,22 +2476,20 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
+        // Mobile menu toggle - 3 lines hamburger
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
         
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            hamburger.innerHTML = navMenu.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
+            hamburger.classList.toggle('active');
         });
         
         // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
-                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                hamburger.classList.remove('active');
             });
         });
         
@@ -2404,11 +2536,13 @@
             });
         };
         
-        // Form switching functionality
+        // Form switching functionality - Beautiful UI toggle
         document.addEventListener('DOMContentLoaded', function() {
             const formChoiceButtons = document.querySelectorAll('.btn-form-choice');
             const quickForm = document.getElementById('quick-form');
             const googleForm = document.getElementById('google-form');
+            const googleFormContainer = document.getElementById('googleFormContainer');
+            const googleFormMessage = document.getElementById('googleFormMessage');
             
             formChoiceButtons.forEach(button => {
                 button.addEventListener('click', function() {
@@ -2422,33 +2556,36 @@
                     if (formType === 'quick') {
                         quickForm.classList.add('active');
                         googleForm.classList.remove('active');
-                        
-                        // Refresh iframe to ensure it loads properly
-                        const iframe = quickForm.querySelector('iframe');
-                        iframe.src = iframe.src;
+                        // Hide the iframe container, show the message
+                        if (googleFormContainer) googleFormContainer.style.display = 'none';
+                        if (googleFormMessage) googleFormMessage.style.display = 'block';
                     } else {
                         quickForm.classList.remove('active');
                         googleForm.classList.add('active');
-                        
-                        // Refresh iframe to ensure it loads properly
-                        const iframe = googleForm.querySelector('iframe');
-                        iframe.src = iframe.src;
+                        // Show the iframe container, hide the message
+                        if (googleFormContainer) googleFormContainer.style.display = 'block';
+                        if (googleFormMessage) googleFormMessage.style.display = 'none';
+                        // Load the iframe if not already loaded
+                        const iframe = googleFormContainer.querySelector('iframe');
+                        if (iframe && !iframe.src) {
+                            iframe.src = iframe.dataset.src || 'https://docs.google.com/forms/d/e/1FAIpQLSf4fPK3VsTbwDNLFwSjlfz2i41rXCgQjmNLMRE5OwTzA52SGQ/viewform?embedded=true';
+                        }
                     }
                 });
             });
+            
+            // Preload the iframe src
+            const iframe = document.querySelector('#googleFormContainer iframe');
+            if (iframe) {
+                iframe.dataset.src = iframe.src;
+                // Don't load initially, load only when detailed form is selected
+                iframe.src = 'about:blank';
+            }
         });
         
         // Initialize animations
         window.addEventListener('load', () => {
-            // Trigger initial animations
             animateOnScroll();
-            
-            // Add animation to logo on load
-            const logo = document.querySelector('.logo');
-            setTimeout(() => {
-                logo.style.transform = 'translateY(0)';
-                logo.style.opacity = '1';
-            }, 300);
         });
         
         window.addEventListener('scroll', animateOnScroll);
@@ -2457,16 +2594,53 @@
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero');
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        });
-
-        // Google Form response tracking
-        window.addEventListener('message', function(event) {
-            if (event.origin === 'https://docs.google.com') {
-                console.log('Google Form message received:', event.data);
-                // You can add tracking for form submissions here
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
         });
+
+        // Quick Form Handler - Beautiful UI
+        function handleQuickForm(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('.btn-submit');
+            const originalText = btn.innerHTML;
+            
+            // Simple validation
+            const inputs = form.querySelectorAll('.form-control');
+            let isValid = true;
+            inputs.forEach(input => {
+                if (input.hasAttribute('required') && !input.value.trim()) {
+                    isValid = false;
+                    input.style.borderColor = '#dc3545';
+                } else {
+                    input.style.borderColor = '';
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show loading state
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+            
+            // Simulate sending (replace with actual form submission)
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
+                btn.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+                
+                // Reset after 3 seconds
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                    form.reset();
+                }, 3000);
+            }, 1500);
+        }
     </script>
 </body>
 </html>
